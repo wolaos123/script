@@ -1,3 +1,5 @@
+```SQL
+
 -- Top CPU Processes
 
 SELECT
@@ -21,3 +23,6 @@ SELECT
  'SQL_TEXT'  || CHR(9) ||    ': ' || q.sql_text
 FROM v$session s,   v$process p,   v$sql     q
 WHERE   s.paddr = p.addr  AND   s.sql_id = q.sql_id(+)  AND   s.status = 'ACTIVE'  AND   p.spid = '&PID_FROM_OS' ; 
+
+
+```SQL
